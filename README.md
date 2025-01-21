@@ -1,4 +1,4 @@
-# Documentazione per Resume Optimization AI
+# Resume Optimization AI
 
 **Problema**: Quando si inviano candidature a più aziende, è fondamentale che il curriculum sia in linea con i requisiti di ciascuna posizione lavorativa. Tuttavia, personalizzare il CV per ogni candidatura può essere un processo lungo e noioso, soprattutto per chi deve inviare molte candidature in poco tempo.
 
