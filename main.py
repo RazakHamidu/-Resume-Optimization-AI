@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 
 def Creatpdf(text):
     # Creazione di un file PDF
-    c = canvas.Canvas("output.pdf")
+    c = canvas.Canvas("NewResumeAI.pdf")
 
     # Specifica un font con supporto Unicode
     c.setFont("Helvetica", 12)
@@ -17,6 +17,14 @@ def Creatpdf(text):
     print("PDF creato con successo!")
 
 
+def DownloadNewResume(namefile):
+    with open(f"{namefile}", "rb") as file:
+        btn = st.download_button(
+            label="Download Resume",
+            data=file,
+            file_name="New Reusme.pdf",
+            mime="pdf",
+        )
 
 
 
@@ -63,14 +71,14 @@ with st.form("my_form"):
 
     button = st.form_submit_button('Carica')
     
-    if button:
-        if job_description is not None and  uploaded_file_Resume is not None: #Se la descrizione e pdf sono caricati continua se no mostra alert
-            text_pdf_resume = Uploader_Pdf_Exstrat_text(uploaded_file_Resume)
-            New_pdf_resume_Oz = Gemini_model(PromptSy(md_resume=text_pdf_resume, job_desciption=job_description))
-             
-            with st.container(border=True):
+if button:
+    if job_description is not None and  uploaded_file_Resume is not None: #Se la descrizione e pdf sono caricati continua se no mostra alert
+        text_pdf_resume = Uploader_Pdf_Exstrat_text(uploaded_file_Resume)
+        New_pdf_resume_Oz = Gemini_model(PromptSy(md_resume=text_pdf_resume, job_desciption=job_description))
+        Creatpdf(New_pdf_resume_Oz)
+        with st.container(border=True):
                 st.markdown(New_pdf_resume_Oz)
+                DownloadNewResume("NewResumeAI.pdf")
+    else:
+        st.warning("Non hai caricato niete")
 
-            
-        else:
-            st.warning("Non hai caricato niete")
