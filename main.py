@@ -1,11 +1,11 @@
 import pdfplumber
+import streamlit as st
 
-# Percorso del file PDF 
-pdf_path = "Luca Rossi.pdf"
-# Apertura del PDF con pdfplumber
-def Uploader_Pdf(pdf_path):
+
+
+def Uploader_Pdf_Exstrat_text(pdf_path):
     with pdfplumber.open(pdf_path) as pdf:  
         for page in pdf.pages:   
-            print(page.extract_text())
+            return page.extract_text()
 
-Uploader_Pdf(pdf_path   )
+uploaded_file = st.file_uploader("Carica un file PDF", type="pdf")
