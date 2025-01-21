@@ -2,7 +2,8 @@
 
 **Problema**: Quando si inviano candidature a più aziende, è fondamentale che il curriculum sia in linea con i requisiti di ciascuna posizione lavorativa. Tuttavia, personalizzare il CV per ogni candidatura può essere un processo lungo e noioso, soprattutto per chi deve inviare molte candidature in poco tempo.
 
-**Soluzione**: Resume Optimization AI è un'applicazione che utilizza modelli di AI per personalizzare automaticamente il curriculum. L'app prende in input un curriculum e una descrizione del lavoro, e genera un CV ottimizzato che evidenzia le competenze e le esperienze più rilevanti per la posizione desiderata.
+**Soluzione**: Resume Optimization AI è un'applicazione che utilizza modelli di AI per personalizzare automaticamente il curriculum. L'app prende in input un curriculum e una descrizione del lavoro, e genera un CV ottimizzato che evidenzia le competenze e le esperienze più rilevanti per la posizione desiderata. [Video dimostrativo](https://youtu.be/PBNzG5MNFIY)
+
 
 
 ## Caratteristiche
