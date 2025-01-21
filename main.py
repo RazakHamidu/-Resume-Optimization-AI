@@ -2,6 +2,23 @@ import pdfplumber
 import streamlit as st
 import google.generativeai as genai
 import os
+from reportlab.pdfgen import canvas
+
+def Creatpdf(text):
+    # Creazione di un file PDF
+    c = canvas.Canvas("output.pdf")
+
+    # Specifica un font con supporto Unicode
+    c.setFont("Helvetica", 12)
+
+    c.drawString(100, 750, text)
+
+    c.save()
+    print("PDF creato con successo!")
+
+
+
+
 
 def PromptSy(md_resume, job_desciption):
     prompt = f"""
@@ -50,6 +67,7 @@ with st.form("my_form"):
         if job_description is not None and  uploaded_file_Resume is not None: #Se la descrizione e pdf sono caricati continua se no mostra alert
             text_pdf_resume = Uploader_Pdf_Exstrat_text(uploaded_file_Resume)
             New_pdf_resume_Oz = Gemini_model(PromptSy(md_resume=text_pdf_resume, job_desciption=job_description))
-            New_pdf_resume_Oz
+            Creatpdf(New_pdf_resume_Oz)  
+            
         else:
             st.warning("Non hai caricato niete")
