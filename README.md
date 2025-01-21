@@ -28,7 +28,7 @@ Assicurati di avere installato:
 1.  Clona il repository:
     
     ```bash
-    git clone https://github.com/RazakHamidu/-Resume-Optimization-AI.git
+    git clone https://github.com/RazakHamidu/Resume-Optimization-AI.git
     cd resume-optimization-ai
     
     ```
