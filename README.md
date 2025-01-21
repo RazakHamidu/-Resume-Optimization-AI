@@ -148,7 +148,7 @@ Assicurati di avere installato:
 ## Struttura dei File
 
 ```
-resume-optimization/
+resume-optimization-ai/
 |── __pycache__/         # File di cache Python
 |── .env                # Variabili d'ambiente
 |── .gitignore          # File per ignorare determinati file in Git
